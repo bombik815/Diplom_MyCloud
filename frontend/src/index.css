@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-bg: #f5f8ff;
+  --box-bg: #fff;
+  --input-bg: #f5f8ff;
+  --txt-color: #2f2d2f;
+  --txt-second-color: #2f2d2f;
+  --border-color: #2f2d2f;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+App,
+main {
+  min-height: 80vh;
+}
+
+h1 {
+  font-size: 1.8rem;
+  padding: 1rem 0;
+}
+
+h2 {
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+}
+
+h3 {
+  padding: 1rem 0;
+}
+
+.rating span {
+  margin: 0.1rem;
+}
+
+/* carousel */
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: flex;
+}
+.carousel-caption {
+  position: absolute;
+  top: 0;
+}
+
+.carousel-caption h4 {
+  color: #fff;
+}
+
+.carousel img {
+  display: block;
+  height: 300px;
+  padding: 30px;
+  margin: 40px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.carousel a {
+  margin: 0 auto;
+}
+@media (max-width: 900px) {
+  .carousel-caption h2 {
+    font-size: 2.5vw;
+  }
+}
+.hidden {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  line-height: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.box {
+  background-color: var(--box-bg);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+}
+
+.drop-file-input {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 1px dashed var(--border-color);
+  border-radius: 20px;
+  background-color: var(--input-bg);
+}
+
+.drop-file-input input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.drop-file-input:hover,
+.drop-file-input.dragover {
+  opacity: 0.6;
+}
+
+.drop-file-input__label {
+  text-align: center;
+  color: var(--txt-second-color);
+  font-weight: 600;
+  padding: 10px;
+}
+
+.paginationBttns {
+  width: 20%;
+  height: 10px;
+  list-style: none;
+  display: flex;
+  justify-content: start;
+}
+
+.paginationBttns a {
+  padding: 5px;
+  margin: 4px;
+  border-radius: 5px;
+  border: 1px solid #717171;
+  color: #717171;
+  cursor: pointer;
+}
+.paginationActive a,
+.paginationBttns a:focus {
+  color: #fff !important ;
+  background-color: #374151;
+}
+
+.paginationBttns a:hover {
+  color: #fff !important ;
+  background-color: #374151;
+  text-decoration: none;
+}
+
+.paginationDisabled a {
+  color: #374151;
+  background-color: #d1d0ce !important;
+}
